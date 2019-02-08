@@ -39,7 +39,7 @@ namespace ProductCatalog.Data.Maps
             builder.Property(x => x.LasUpdateDate)
             .IsRequired();
 
-            // mapeamento um para muitos
+            // mapeamento -> uma categoria para muitos livros
             builder.HasOne(x => x.Category)
             .WithMany(x => x.Products);
         }
