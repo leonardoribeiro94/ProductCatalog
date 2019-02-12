@@ -19,6 +19,7 @@ namespace ProductCatalog.Controllers
 
         [HttpGet]
         [Route("v1/categories")]
+        [ResponseCache(Duration = 5)] // Cache-Control: public, max-age: 60
         public IEnumerable<Category> Get() =>
             _repository.Get();
 
